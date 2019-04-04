@@ -62,7 +62,7 @@ call add(g:ctrlp_ext_vars, {
 "
 function! ctrlp#{s:n}#init()
 	let num = histnr('cmd')
-	let line = histget('cmd', num)
+	let line = strtrans(histget('cmd', num))
 	let lines = []
 	while num >= 1
 		if line != ''
